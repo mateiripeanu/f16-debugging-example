@@ -20,15 +20,15 @@ public class Sort {
      int left_i = 0;
      int right_i = 0;
      int insert_i = 0;
-     for (; left_i < left.length && right_i < right.length; left_i++) {
+     while (left_i < left.length && right_i < right.length) {
        if (left[left_i] <= right[right_i]) {
          array[insert_i] = left[left_i];
          insert_i += 1;
+         left_i += 1;
        } else {
          array[insert_i] = right[right_i];
          insert_i += 1;
          right_i += 1;
-         left_i -= 1;
        }
      }
      
