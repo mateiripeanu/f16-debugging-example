@@ -5,14 +5,11 @@ public class Sort {
      if (array.length <= 1)
        return;
 
-     int[] left = new int[array.length/2];
-     int rightLength = array.length / 2;
-     if (array.length % 2 == 1)
-       rightLength += 1;
-     int[] right = new int[rightLength];
+     int[] left = new int[array.length / 2];
+     int[] right = new int[array.length / 2];
 
-     System.arraycopy(array, 0, left, 0, array.length / 2);
-     System.arraycopy(array, array.length / 2, right, 0, rightLength);
+     System.arraycopy(array, 0, left, 0, left.length);
+     System.arraycopy(array, array.length / 2, right, 0, right.length);
 
      sort(left);
      sort(right);
@@ -45,4 +42,5 @@ public class Sort {
    }
 
 }
+
 
