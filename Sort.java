@@ -19,13 +19,9 @@ public class Sort {
      int insert_i = 0;
      while (left_i < left.length && right_i < right.length) {
        if (left[left_i] <= right[right_i]) {
-         array[insert_i] = left[left_i];
-         insert_i += 1;
-         left_i += 1;
+         array[insert_i++] = left[left_i++];
        } else {
-         array[insert_i] = right[right_i];
-         insert_i += 1;
-         right_i += 1;
+         array[insert_i++] = right[right_i++];
        }
      }
      
@@ -42,5 +38,4 @@ public class Sort {
    }
 
 }
-
 
