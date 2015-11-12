@@ -20,8 +20,8 @@ public class Sort {
      int left_i = 0;
      int right_i = 0;
      int insert_i = 0;
-     for (; left_i < left.length; left_i++) {
-       if (right_i == rightLength || left[left_i] <= right[right_i]) {
+     for (; left_i < left.length && right_i < right.length; left_i++) {
+       if (left[left_i] <= right[right_i]) {
          array[insert_i] = left[left_i];
          insert_i += 1;
        } else {
@@ -31,6 +31,12 @@ public class Sort {
          left_i -= 1;
        }
      }
+     
+     for (;left_i < left.length; left_i++) {
+       array[insert_i] = left[left_i];
+       insert_i++;
+     }
+     
      for (;right_i < right.length; right_i++) {
        array[insert_i] = right[right_i];
        insert_i++;
@@ -39,3 +45,4 @@ public class Sort {
    }
 
 }
+
