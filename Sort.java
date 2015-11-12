@@ -25,14 +25,12 @@ public class Sort {
        }
      }
      
-     for (;left_i < left.length; left_i++) {
-       array[insert_i] = left[left_i];
-       insert_i++;
+     while (left_i < left.length) {
+       array[insert_i++] = left[left_i++];
      }
      
-     for (;right_i < right.length; right_i++) {
-       array[insert_i] = right[right_i];
-       insert_i++;
+     while (right_i < right.length) {
+       array[insert_i++] = right[right_i++];
      }
 
    }
