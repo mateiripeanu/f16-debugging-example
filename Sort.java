@@ -17,6 +17,7 @@ public class Sort {
      int left_i = 0;
      int right_i = 0;
      int insert_i = 0;
+     
      while (left_i < left.length && right_i < right.length) {
        array[insert_i++] =
            (left[left_i] <= right[right_i]) ? left[left_i++] : right[right_i++];
