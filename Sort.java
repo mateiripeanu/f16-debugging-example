@@ -5,7 +5,7 @@ public class Sort {
      if (array.length <= 1)
        return;
 
-     int[] left = new int[array.length / 2];
+     int[] left  = new int[array.length / 2];
      int[] right = new int[array.length / 2];
 
      System.arraycopy(array, 0, left, 0, left.length);
